@@ -1,19 +1,13 @@
-def is_multiple_of_3(number: int) -> bool:
-    return number % 3 == 0
-
-def is_multiple_of_5(number: int) -> bool:
-    return number % 5 == 0
-
 def fizz_buzz(numbers: list) -> None:
     i = 0
     while len(numbers) > i:
         if numbers[i] == 0:
             pass
-        elif is_multiple_of_3(numbers[i]) and is_multiple_of_5(numbers[i]):
+        elif numbers[i] % 3 == 0 and numbers[i] % 5 == 0:
             numbers[i] = "FizzBuzz"
-        elif is_multiple_of_3(numbers[i]):
+        elif numbers[i] % 3 == 0:
             numbers[i] = "Fizz"
-        elif is_multiple_of_5(numbers[i]):
+        elif numbers[i] % 5 == 0:
             numbers[i] = "Buzz"
         i+=1
 
